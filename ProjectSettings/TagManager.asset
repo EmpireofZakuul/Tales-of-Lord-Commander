@@ -11,6 +11,7 @@ TagManager:
   - NPCTurnLeft
   - GameManager
   - Armor
+  - Conversation
   layers:
   - Default
   - TransparentFX
