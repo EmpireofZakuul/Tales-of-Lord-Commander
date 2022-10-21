@@ -16,17 +16,32 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded = true;
     public Collider2D playerCollider;
     bool facingRight = true;
+    public Animator animator;
+    public float runSpeed = 40f;
+
+    float horizontalMove = 0f;
+
+
 
 
     void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
-             
+        //animator = GetComponent<Animator>();
+          
     }
 
 
     void Update()
     {
+
+        //animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+
+
 
         if (Input.GetKey(KeyCode.A))
         {

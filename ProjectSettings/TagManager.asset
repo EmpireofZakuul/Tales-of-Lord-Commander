@@ -15,13 +15,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - JumpLayer
   - Enemies
   - Armor
-  - 
+  - Player
   - 
   - 
   - 
@@ -45,6 +45,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: snow
+    uniqueID: 3720591189
+    locked: 0
+  - name: Background
+    uniqueID: 6448957
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3441511495
+    locked: 0
+  - name: Enemies
+    uniqueID: 3572987131
+    locked: 0
+  - name: Armor
+    uniqueID: 2365204851
     locked: 0
