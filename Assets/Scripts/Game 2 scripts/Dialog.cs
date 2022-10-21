@@ -16,8 +16,8 @@ public class Dialog : MonoBehaviour
     void Start()
     {
       dialogText.text = "";
-        //Panel.SetActive(true);
-        //StartCoroutine(Type());
+        Panel.SetActive(true);
+        StartCoroutine(Type());
     }
 
     // Update is called once per frame
@@ -64,11 +64,12 @@ public class Dialog : MonoBehaviour
     }
     */
 
-    public void StartConversation()
+   /* public void StartConversation()
     {
         Panel.SetActive(true);
         StartCoroutine(Type());
     }
+    */
 
 
 }

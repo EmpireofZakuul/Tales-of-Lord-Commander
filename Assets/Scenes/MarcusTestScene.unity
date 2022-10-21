@@ -1359,14 +1359,8 @@ MonoBehaviour:
   - 'Darth Bane: Peace is a lie, there is only passion. Through passion, I gain strength.
     Through strength, I gain power. Through power, I gain victory. Through victory,
     my chains are broken. The Force shall free me.'
-  - 'Supreme Chancellor: Did you ever hear the tragedy of Darth Plagueis the Wise?'
-  - 'Supreme Chancellor: I thought not. It''s not a story the Jedi would tell you.
-    It''s a Sith legend. Darth Plagueis was a Dark Lord of the Sith so powerful and
-    so wise... he could use the Force to influence the midichlorians to create...
-    life. He had such a knowledge of the Dark Side, he could even keep the ones he
-    cared about from dying.'
   dialogText: {fileID: 807769008}
-  typingSpeed: 0.05
+  typingSpeed: 0.02
   continueButton: {fileID: 1485105730}
   Panel: {fileID: 139309686}
 --- !u!4 &1728663330
