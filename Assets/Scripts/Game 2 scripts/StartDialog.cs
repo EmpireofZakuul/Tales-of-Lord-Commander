@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartDialog : MonoBehaviour
 {
-     public Dialog playerconversation;
+    public Dialog playerconversation;
     public bool activeConversation;
    
    
@@ -23,6 +23,7 @@ public class StartDialog : MonoBehaviour
         if ( !activeConversation  && collision.gameObject.tag == "Conversation" )
         {          
             activeConversation = true;
+            playerconversation.StartConversation();
            
         }
         
