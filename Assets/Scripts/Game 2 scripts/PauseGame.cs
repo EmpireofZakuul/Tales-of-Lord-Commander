@@ -6,26 +6,28 @@ using UnityEngine.UI;
 
 public class PauseGame : MonoBehaviour
 {
-    [Header("Pause Section")]
+   [Header("Pause Section")]
+    public GameObject pauseMenu;
     public static bool gameIsPaused;
     public GameObject pauseButton;
-    public GameObject pauseMenu;
+    
 
     [Header("Music Section")]
+    public bool isOn = true;
     private Sprite soundOn;
     public Sprite soundOff;
     public Button button;
-    public bool isOn = true;
     public AudioSource musicAudioSource;
 
-   /* [Header("Sound Effects Section")]
+    [Header("Sound Effects Section")]
+    public bool effectIsOn = true;
     private Sprite soundEffectOn;
     public Sprite soundEffectOff;
     public Button soundEffectButton;
-    public bool effectIsOn = true;
     public AudioSource[] soundEffectAudioSource;
+    
 
-    */
+    
     void Start()
     {
         soundOn = button.image.sprite;
@@ -34,8 +36,12 @@ public class PauseGame : MonoBehaviour
         musicAudioSource.Play();
 
         
-       // soundEffectOn = soundEffectButton.image.sprite;
+        soundEffectOn = soundEffectButton.image.sprite;
        // soundEffectAudioSource = GameObject.FindGameObjectsWithTag("SoundEffect");
+        //soundEffectAudioSource
+
+        //soundEffectAudioSource = FindObjectsOfType<AudioSource>();
+      
     }
 
 
@@ -45,6 +51,8 @@ public class PauseGame : MonoBehaviour
          pauseMenu.SetActive(true);
          Time.timeScale = 0f;    
     }
+
+
    public void PlayGame()
     {
         Time.timeScale = 1f;
@@ -52,10 +60,12 @@ public class PauseGame : MonoBehaviour
         pauseButton.SetActive(true);
     }
 
+
     public void ReturnToMap()
     {
        SceneManager.LoadScene("Map");
     }
+
 
     public void QuitTheGame()
     {
@@ -69,6 +79,7 @@ public class PauseGame : MonoBehaviour
         #endif
     }
 
+ 
     public void MusicToggle()
     {
       
@@ -85,27 +96,31 @@ public class PauseGame : MonoBehaviour
            musicAudioSource.Play();
       }
     } 
+  
 
-    /*public void SoundEffectToggle()
+    public void SoundEffectToggle()
     {
         if(effectIsOn)
         {
           soundEffectButton.image.sprite = soundEffectOff;
-          isOn = false;
+          effectIsOn = false;
            
           foreach(AudioSource audioSource in soundEffectAudioSource)
           {
                  audioSource.Pause();
           }
         }
-          
-        else
+          else 
         {
           soundEffectButton.image.sprite = soundEffectOn;
-          isOn = true;    
+          effectIsOn = true;  
+          
+          foreach(AudioSource audioSource in soundEffectAudioSource)
+          {
+                 audioSource.Play();
+          }
         }
-    }
-    */
-
-    
+        
+        
+    }    
 }
