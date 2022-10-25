@@ -7,22 +7,25 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public Button startGame;
-    public Button playerControls;
+    //public Button playerControls;
     public Button quitGame;
-    public Button returnToMainMenu;
+   // public Button returnToMainMenu;
+   public GameObject setting;
 
     public void Gamelevel()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game 2");
     }
 
-    public void ControlsMenu()
+    public void Settings()
     {
-        SceneManager.LoadScene("Controls");
+        //SceneManager.LoadScene("Controls");
+        setting.SetActive(true);
     }
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        //SceneManager.LoadScene("Main Menu");
+         setting.SetActive(false);
     }
 
     public void QuitTheGame()
