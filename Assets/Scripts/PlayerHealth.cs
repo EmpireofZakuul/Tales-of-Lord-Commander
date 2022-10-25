@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    //player health bar
+   /* //player health bar
     public int playerMaxHealth = 3;
     public int playerCurrentHealth;
     public PlayerHealthBar healthBar;
 
+    */
     //player hearts
+    [Header("Health")]
     public int playerHealth;
     public int playerNumberOfHearts;
     public Image[] playerHearts;
@@ -19,8 +21,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Start()//all code related to player health bar
     {
-        playerCurrentHealth = playerMaxHealth;
-        healthBar.PlayerMaxHealth(playerMaxHealth);
+        //playerCurrentHealth = playerMaxHealth;
+        //healthBar.PlayerMaxHealth(playerMaxHealth);
     }
     private void Update()//all code in update related to player hearts
     {
@@ -55,14 +57,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Collision.gameObject.tag == "Enemy")
         {
-            playerCurrentHealth--;//player healthbar
+            //playerCurrentHealth--;//player healthbar
             playerHealth--;//player hearts
-            healthBar.SetPlayerHealth(playerCurrentHealth);
+            //healthBar.SetPlayerHealth(playerCurrentHealth);
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "DeathZone")
         {
@@ -73,6 +75,7 @@ public class PlayerHealth : MonoBehaviour
             
         }
     }
+    */
 
 }
 

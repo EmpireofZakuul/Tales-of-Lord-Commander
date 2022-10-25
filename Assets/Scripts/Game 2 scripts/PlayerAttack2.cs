@@ -13,6 +13,7 @@ public class PlayerAttack2 : MonoBehaviour
     public Transform attackPosition;
     public float attackRanage;
     public LayerMask enemies;
+    public bool attack;
    // public float attackRate = 2f;
     //private float nextAttackTime = 0f;
 
@@ -28,7 +29,8 @@ public class PlayerAttack2 : MonoBehaviour
         //if(Time.time >= nextAttackTime)
         {
 
-            if (Input.GetMouseButtonDown(0))
+            //if (Input.GetMouseButtonDown(0))
+            if (attack)
             {
                 //Debug.Log("Attack");
                 Attack();
@@ -65,5 +67,12 @@ public class PlayerAttack2 : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPosition.position, attackRanage);
+    }
+
+    public void StartAttack(){
+        attack = true;
+    }
+    public void StopAttack(){
+        attack = false;
     }
 }

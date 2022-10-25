@@ -652,6 +652,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerCollider: {fileID: 546438239}
+  animator: {fileID: 0}
+  runSpeed: 40
+  moveleft: 0
+  moveRight: 0
 --- !u!61 &546438239
 BoxCollider2D:
   m_ObjectHideFlags: 0

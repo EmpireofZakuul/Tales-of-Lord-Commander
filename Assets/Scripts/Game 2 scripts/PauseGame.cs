@@ -10,6 +10,10 @@ public class PauseGame : MonoBehaviour
     public GameObject pauseMenu;
     public static bool gameIsPaused;
     public GameObject pauseButton;
+    public GameObject moveLeftButton;
+    public GameObject moveRightButton;
+    public GameObject attackButton;
+
     
 
     [Header("Music Section")]
@@ -47,7 +51,10 @@ public class PauseGame : MonoBehaviour
 
    public void GamePaused()
     {      
-         pauseButton.SetActive(false);   
+         pauseButton.SetActive(false);  
+         moveLeftButton.SetActive(false);
+         moveRightButton.SetActive(false);
+         attackButton.SetActive(false);
          pauseMenu.SetActive(true);
          Time.timeScale = 0f;    
     }
@@ -58,6 +65,9 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
+         moveLeftButton.SetActive(true);
+         moveRightButton.SetActive(true);
+         attackButton.SetActive(true);
     }
 
 
