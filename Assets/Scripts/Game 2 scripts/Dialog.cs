@@ -11,13 +11,12 @@ public class Dialog : MonoBehaviour
     public float typingSpeed;
     public GameObject continueButton;
     public GameObject Panel;
-    //public bool activeConversation = false;
-    // Start is called before the first frame update
+  
+    
     void Start()
     {
       dialogText.text = "";
-        Panel.SetActive(true);
-        StartCoroutine(Type());
+        
     }
 
     // Update is called once per frame
@@ -37,7 +36,8 @@ public class Dialog : MonoBehaviour
          }
     }
 
-    public void ContinueSentance(){
+    public void ContinueSentance()
+    {
          continueButton.SetActive(false);
         if(index < sentances.Length - 1){
             index++;
@@ -49,27 +49,16 @@ public class Dialog : MonoBehaviour
             dialogText.text = "";
              continueButton.SetActive(false);
             Panel.SetActive(false);
-            //activeConversation = false;
+          
         }
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Conversation" &&!activeConversation)
-        {
-            
-            activeConversation = true;
-        }
-        
-    }
-    */
-
-   /* public void StartConversation()
+    public void StartConversation()
     {
         Panel.SetActive(true);
         StartCoroutine(Type());
     }
-    */
+    
 
 
 }
