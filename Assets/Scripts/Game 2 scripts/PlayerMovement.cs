@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
           
     }
 
@@ -38,9 +38,9 @@ public class PlayerMovement : MonoBehaviour
     {
 
         //animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+       // horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
 
 
@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 180, 0);
             transform.Translate(Vector2.right * playerSpeed * Time.deltaTime);
             facingRight = false;
+            animator.SetBool("Moving", true);
 
         }
         //if (Input.GetKey(KeyCode.D))
@@ -58,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             transform.Translate(Vector2.right * playerSpeed * Time.deltaTime);
+            animator.SetBool("Moving", true);
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -87,7 +89,8 @@ public class PlayerMovement : MonoBehaviour
 
         moveleft = false;  
         moveRight = false;
-   }
+        animator.SetBool("Moving", false);
+    }
 
    
 
