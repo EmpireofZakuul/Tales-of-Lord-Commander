@@ -46,7 +46,7 @@ public class PickupPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Sword")
         {
 
-            attack2.damage++;
+            attack2.damage+=1;
             Destroy(collision.gameObject);
         }
 

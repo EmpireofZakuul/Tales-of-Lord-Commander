@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -18,9 +19,11 @@ public class PlayerHealth : MonoBehaviour
     public Image[] playerHearts;
     public Sprite playerFullHeart;
     public Sprite playerEmptyHeart;
+    public bool dead = false;
 
     public void Start()//all code related to player health bar
     {
+        dead = false;
         //playerCurrentHealth = playerMaxHealth;
         //healthBar.PlayerMaxHealth(playerMaxHealth);
     }
@@ -51,6 +54,10 @@ public class PlayerHealth : MonoBehaviour
                 playerHearts[i].enabled = false;
             }
         } 
+
+        if(playerHealth <=0 && !dead){
+            Die();
+        }
     }
     
     public void OnCollisionEnter2D(Collision2D Collision)
@@ -62,6 +69,11 @@ public class PlayerHealth : MonoBehaviour
             //healthBar.SetPlayerHealth(playerCurrentHealth);
         }
 
+    }
+    public void Die()
+    {
+        dead = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)

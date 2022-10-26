@@ -13,6 +13,8 @@ TagManager:
   - Armor
   - Conversation
   - EndLevel
+  - Sword
+  - King
   layers:
   - Default
   - TransparentFX
