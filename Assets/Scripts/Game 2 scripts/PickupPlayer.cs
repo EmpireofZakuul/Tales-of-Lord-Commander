@@ -10,6 +10,7 @@ public class PickupPlayer : MonoBehaviour
     //public GameObject heartEmpty;
      public GameObject heartFull;
      public float pickedUp = 0f;
+    public PlayerAttack2 attack2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,16 @@ public class PickupPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pickedUp == 1)
-        {
+        //if(pickedUp == 1)
+        //{
             //SceneManager.LoadScene("Game 3")
 
-        }
+        //}
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Armor")
+        if (collision.gameObject.tag == "Armor")
         {
             playerHealth.playerHealth += 1;
             playerHealth.playerNumberOfHearts += 1;
@@ -38,9 +39,17 @@ public class PickupPlayer : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if(collision.gameObject.tag == "EndLevel")
+
+
+
+
+        if (collision.gameObject.tag == "Sword")
         {
 
+            attack2.damage++;
+            Destroy(collision.gameObject);
         }
+
     }
+    
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack2 : MonoBehaviour
 {
 
-    public int damage;
+    public int damage = 1;
     //public float playerAttackSpeed = 3f;
     private float timeBetweenAttack;
     public float startTimeBetweenAttack = 3f;
