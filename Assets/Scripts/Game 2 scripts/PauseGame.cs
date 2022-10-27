@@ -29,9 +29,7 @@ public class PauseGame : MonoBehaviour
     public Sprite soundEffectOff;
     public Button soundEffectButton;
     public AudioSource[] soundEffectAudioSource;
-    
 
-    
     void Start()
     {
         soundOn = button.image.sprite;
@@ -39,9 +37,8 @@ public class PauseGame : MonoBehaviour
         musicAudioSource.GetComponent<AudioSource>();
         musicAudioSource.Play();
 
-        
         soundEffectOn = soundEffectButton.image.sprite;
-       // soundEffectAudioSource = GameObject.FindGameObjectsWithTag("SoundEffect");
+        //soundEffectAudioSource = GameObject.FindGameObjectsWithTag("SoundEffect");
         //soundEffectAudioSource
 
         //soundEffectAudioSource = FindObjectsOfType<AudioSource>();
@@ -130,7 +127,13 @@ public class PauseGame : MonoBehaviour
                  audioSource.Play();
           }
         }
-        
-        
-    }    
+    }
+
+    public void StartAttack()
+    {
+        if (effectIsOn)
+        {
+            soundEffectAudioSource[0].Play();
+        }
+    }
 }
