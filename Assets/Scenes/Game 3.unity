@@ -5979,8 +5979,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentances:
-  - hjhthttttttttttttttttt yhyhhhhhthtf
-  - hjtfhtffhthtfhtfhthtthfhtfth
+  - 'EDDISON TOLLETT: Lord, the Night King is here!'
+  - 'JON SNOW: What does he want, Eddie?'
+  - 'EDDISON TOLLETT: An endless Night. He wants to create a Realm of the Dead. You''ll
+    have to obtain the Dragonglass by killing the Wight Walkers to defeat the Night
+    King.'
+  - 'JON SNOW: Thank you Eddie. You will be incharge of Castle Black, until I come
+    back.'
+  - 'EDDISON TOLLETT: Sure my Lord. Godspeed to you!'
   dialogText: {fileID: 449643384}
   typingSpeed: 0.05
   continueButton: {fileID: 1433075144}

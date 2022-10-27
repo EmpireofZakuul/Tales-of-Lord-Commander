@@ -7029,8 +7029,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentances:
-  - hjhthttttttttttttttttt yhyhhhhhthtf
-  - hjtfhtffhthtfhtfhthtthfhtfth
+  - 'SER RODRIK CASSEL: Lord Commander Snow, the Dead are already here!'
+  - 'JON SNOW: It is my responsibility to save this realm from those who wish to
+    destroy it, Ser Rodrik.'
+  - "SER RODRIK CASSEL: They are Dead. You can\u2019t beat The Death, my Lord! You'll
+    have to obtain the armour by killing the Wight Walkers to reach their King."
+  - 'SER RODRIK CASSEL: But be vary my Lord, Attack the Wight Walkers when you are
+    close to them. If you get too close, they will kill you.'
+  - 'JON SNOW: Thank you Ser Rodrik. Farewell to you.'
+  - 'SER RODRIK CASSEL: Godspeed to you, my Lord'
   dialogText: {fileID: 627731878}
   typingSpeed: 0.05
   continueButton: {fileID: 1972013061}
