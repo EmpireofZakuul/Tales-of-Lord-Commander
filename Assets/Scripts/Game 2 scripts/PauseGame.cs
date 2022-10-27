@@ -73,7 +73,7 @@ public class PauseGame : MonoBehaviour
 
     public void ReturnToMap()
     {
-       SceneManager.LoadScene("Map");
+       SceneManager.LoadScene("MapScene");
     }
 
 
