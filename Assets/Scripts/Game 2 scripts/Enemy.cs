@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
      public int playerMaxHealth = 3;
     public int playerCurrentHealth;
     public PlayerHealthBar healthBar;
+    public GameObject gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class Enemy : MonoBehaviour
             Die();
         }
         if(gameObject.tag == "King" && playerCurrentHealth <=0){
-            Debug.Log("won");
+            //Debug.Log("won");
+            gameOver.SetActive(true);
         }
 
 

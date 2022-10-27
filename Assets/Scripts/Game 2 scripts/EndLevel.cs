@@ -33,7 +33,7 @@ public class EndLevel : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Game 3");
+            SceneManager.LoadScene("MapScene");
         }
     }
 }
