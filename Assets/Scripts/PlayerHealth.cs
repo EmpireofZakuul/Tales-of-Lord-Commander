@@ -69,6 +69,14 @@ public class PlayerHealth : MonoBehaviour
             //healthBar.SetPlayerHealth(playerCurrentHealth);
         }
 
+
+        if (Collision.gameObject.tag == "King")
+        {
+            //playerCurrentHealth--;//player healthbar
+            playerHealth-= 3;//player hearts
+            //healthBar.SetPlayerHealth(playerCurrentHealth);
+        }
+
     }
     public void Die()
     {
